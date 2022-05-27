@@ -83,7 +83,7 @@
                 </button>
                 </div>
             </div>
-                
+                @yield('dashboard')
             
             </main>
         </div>
