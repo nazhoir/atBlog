@@ -1,0 +1,87 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* Template Warna */
+:root{
+    --p : #E31F27;
+    --s : #000000;
+    --a : #332C2C;
+}
+
+*{
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+/* Template Warna background */
+.bg-p {
+    background-color: var(--p);
+    
+}
+.bg-sc{
+    background-color: var(--s);
+}
+.bg-ak{
+    background-color: var(--a);
+}
+
+
+/* Template Warna Teks */
+.text-p{
+    color: #E31F27 !important;
+    
+}
+
+.text-s{
+    color: var(--s);
+}
+
+
+
+
+.shadow-custom {
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%) !important;
+}
+
+a {
+    color: var(--s)!important;
+}
+
+a:hover{
+    color: var(--p)!important;
+}
+
+.block-separator {
+    border-top: 1px solid;
+    border-bottom: 2px solid;
+    color: #000000;
+}
+.block-separator.is-style-wide {
+    border-width: 0 0 2px 0;
+}
+.block-separator.is-style-wide {
+    border-bottom-width: 2px;
+}
+
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+}
+  
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+  
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+  
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
