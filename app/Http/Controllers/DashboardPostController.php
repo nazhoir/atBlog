@@ -80,7 +80,11 @@ class DashboardPostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return view('dashboard/posts/edit', [
+            "title" =>  "Edit Post",
+            "post"  =>  $post,
+            "categories" => Category::all()
+        ]);
     }
 
     /**
@@ -103,6 +107,8 @@ class DashboardPostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        Post::destroy($post->id);
+
+        return redirect('/dashboard/posts')->with('success', 'Post Has Been Deleted !');
     }
 }

@@ -10,9 +10,6 @@
       <a href="/" type="button" class="text-decoration-none btn btn-warning">
         <i class="fa-solid fa-arrow-down-short-wide"></i> Short by
       </a>
-      <a type="button" class="text-decoration-none btn btn-danger">
-        <i class="fa-solid fa-check-double"></i> Select
-      </a>
   </div>
 </div>
 
@@ -51,12 +48,18 @@
                 <a href="/dashboard/posts/{{ $post->slug}}" type="button" class="badge bg-info" data-bs-toggle="tooltip" title="Show post detail">
                     <i class="fa-regular fa-eye"></i>
                 </a>
-                <a href="/" type="button" class="badge bg-warning"data-bs-toggle="tooltip" title="Edit post">
+                <a href="/dashboard/posts/{{ $post->slug}}/edit" class="badge bg-warning"data-bs-toggle="tooltip" title="Edit post">
                     <i class="fa-solid fa-pen"></i>
                 </a>
-                <a type="button" class="badge bg-danger" data-bs-toggle="tooltip" title="Delete post">
-                    <i class="fa-solid fa-trash-can"></i>
-                </a>
+                
+                <form action="/dashboard/posts/{{ $post->slug}}" method="post" class="d-inline">
+                  @method('delete')
+                  @csrf
+                    <button  class="badge bg-danger border-0" onclick="return confirm('Are You Sure ?')">
+                      <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </form>
+
             </td>
           </tr>
           @endforeach

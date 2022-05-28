@@ -10,9 +10,13 @@
         <a href="/" type="button" class="text-decoration-none btn btn-warning">
             <i class="fa-solid fa-pen"></i> Edit
         </a>
-        <a type="button" class="text-decoration-none btn btn-danger">
-            <i class="fa-solid fa-trash-can"></i> Delete
-        </a>
+        <form action="/dashboard/posts/{{ $post->slug}}" method="post" class="d-inline">
+            @method('delete')
+            @csrf
+              <button  class="btn btn-danger border-0" onclick="return confirm('Are You Sure ?')">
+                <i class="fa-solid fa-trash-can"></i> Delete
+              </button>
+        </form>
     </div>
 </div>
 
