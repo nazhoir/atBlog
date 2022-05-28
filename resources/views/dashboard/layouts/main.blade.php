@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.98.0">
-    <title>Dashboard | atBlog</title>
+    <title>{{ $title }} | atBlog</title>
 
 
     {{-- Style CSS --}}
@@ -17,6 +17,18 @@
 
     {{-- Fontawesome CSS --}}
     <link rel="stylesheet" href="{{asset('src/fontawesome/css/all.css')}}">
+
+
+    {{-- Trix Editor --}}
+    <link rel="stylesheet" type="text/css" href="{{asset('src/css/trix.css')}}">
+
+    <style>
+      trix-toolbar [data-trix-button-group=file-tools] {
+        display: none;
+      }
+    </style>
+    <script type="text/javascript" src="{{asset('src/js/trix.js')}}"></script>
+    
 
   </head>
   <body>

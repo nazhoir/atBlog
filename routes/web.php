@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DashboardPostController;
 use App\Models\User;
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
@@ -25,6 +26,9 @@ Route::get('/register', [RegisterController::class, 'index'])->middleware('guest
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
+Route :: get('/dashboard/posts/checkSlug',[DashboardPostController :: class,'checkSlug'])
+->middleware('auth');
 
 
 
